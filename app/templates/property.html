@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block main %}
+<div class="single-property-wrapper">
+    <div class="single-property-card">
+        <img src="{{ url_for('static', filename='uploads/' + property.photo) }}"
+             alt="{{ property.title }}"
+             class="single-property-image">
+
+        <div class="single-property-content">
+            <h1 class="single-property-title">{{ property.title }}</h1>
+
+            <div class="single-property-tags">
+                <span class="price-tag">${{ "{:,.0f}".format(property.price) }}</span>
+                <span class="type-tag">{{ property.property_type }}</span>
+            </div>
+
+            <p class="single-property-description">{{ property.description }}</p>
+
+            <div class="single-property-meta">
+                <div class="meta-item">
+                    <span class="inline-icon">🛏</span>
+                    <span>{{ property.bedrooms }} Bedrooms</span>
+                </div>
+
+                <div class="meta-item">
+                    <span class="inline-icon">🚿</span>
+                    <span>{{ property.bathrooms }} Bathrooms</span>
+                </div>
+            </div>
+
+            <div class="single-property-location">
+                <span class="inline-icon">📍</span>
+                <span>{{ property.location }}</span>
+            </div>
+
+            <a href="#" class="email-realtor-btn">Email Realtor</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

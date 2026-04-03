@@ -1,3 +1,435 @@
 body {
-    padding-top: 5rem;
+    margin: 0;
+    background: #f2efea;
+    color: #111;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.site-main {
+    padding-top: 34px;
+    padding-bottom: 40px;
+    min-height: calc(100vh - 120px);
+}
+
+.container {
+    max-width: 1220px;
+}
+
+/* NAVBAR */
+.site-navbar {
+    background: #078847;
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
+.nav-inner {
+    display: flex;
+    align-items: center;
+}
+
+.site-brand {
+    color: #fff !important;
+    font-size: 2rem;
+    font-weight: 400;
+    margin-right: 48px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.brand-icon {
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.site-nav-link {
+    color: #fff !important;
+    font-size: 1rem;
+    margin-right: 22px;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+}
+
+.site-nav-link:hover {
+    color: #e8f7ec !important;
+}
+
+/* HEADINGS */
+.page-title,
+.property-form-page-title {
+    font-size: 4.1rem;
+    line-height: 0.95;
+    font-weight: 700;
+    margin: 0 0 28px 0;
+    color: #111;
+}
+
+/* FORM PAGE */
+.property-form-shell {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.property-form-wrapper {
+    width: 100%;
+    max-width: 720px;
+}
+
+.property-form-page-title {
+    margin-bottom: 24px;
+}
+
+.property-form-card {
+    width: 100%;
+    background: #fff;
+    padding: 28px 26px 32px;
+    box-sizing: border-box;
+}
+
+.property-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px 12px;
+}
+
+.form-group {
+    margin-bottom: 14px;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-label {
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 6px;
+}
+
+.form-control,
+.form-select {
+    width: 100%;
+    border: 1px solid #d0d0d0;
+    border-radius: 0;
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.96rem;
+    padding: 10px 12px;
+    box-sizing: border-box;
+}
+
+textarea.form-control {
+    min-height: 82px;
+    resize: vertical;
+}
+
+/* remove number spinners */
+.no-spinner::-webkit-outer-spin-button,
+.no-spinner::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.no-spinner {
+    appearance: textfield;
+    -moz-appearance: textfield;
+}
+
+/* custom file input */
+.custom-file-wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.custom-file-input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.custom-file-label {
+    display: inline-block;
+    background: #f5f5f5;
+    border: 1px solid #bfbfbf;
+    color: #111;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.95rem;
+    padding: 6px 14px;
+    cursor: pointer;
+    margin: 0;
+}
+
+.selected-file-name {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.95rem;
+    color: #222;
+}
+
+.add-property-btn {
+    display: inline-block;
+    margin-top: 8px;
+    background: #1c9dc2;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 11px 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.95rem;
+}
+
+.add-property-btn:hover {
+    background: #188caf;
+}
+
+/* PROPERTIES PAGE */
+.properties-wrapper {
+    padding-top: 6px;
+}
+
+.properties-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.property-card {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.property-card-image {
+    width: 100%;
+    height: 302px;
+    object-fit: cover;
+    display: block;
+}
+
+.property-card-body {
+    padding: 8px 10px 0;
+    min-height: 130px;
+}
+
+.property-card-title {
+    font-size: 0.98rem;
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 0 0 6px 0;
+    color: #111;
+}
+
+.property-card-location {
+    color: #9b9b9b;
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.property-price-pill {
+    display: inline-block;
+    background: #19a8c8;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.94rem;
+    padding: 8px 16px;
+    border-radius: 999px;
+    margin-bottom: 12px;
+}
+
+.property-card-footer {
+    padding: 0;
+    margin-top: auto;
+}
+
+.view-property-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background: #078847;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.98rem;
+    padding: 13px 10px;
+    border-radius: 0 0 4px 4px;
+}
+
+.view-property-btn:hover {
+    background: #056d38;
+    color: #fff;
+}
+
+/* SINGLE PROPERTY PAGE */
+.single-property-wrapper {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+.single-property-card {
+    width: 100%;
+    max-width: 980px;
+    background: #fff;
+    display: grid;
+    grid-template-columns: 43% 57%;
+}
+
+.single-property-image {
+    width: 100%;
+    height: 100%;
+    min-height: 445px;
+    object-fit: cover;
+    display: block;
+}
+
+.single-property-content {
+    padding: 24px 28px 22px;
+}
+
+.single-property-title {
+    font-size: 2.05rem;
+    font-weight: 700;
+    line-height: 1.12;
+    margin: 0 0 18px 0;
+}
+
+.single-property-tags {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 18px;
+    flex-wrap: wrap;
+}
+
+.price-tag,
+.type-tag {
+    display: inline-block;
+    padding: 12px 19px;
+    border-radius: 999px;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.98rem;
+}
+
+.price-tag {
+    background: #19a8c8;
+}
+
+.type-tag {
+    background: #efcb1d;
+}
+
+.single-property-description {
+    font-size: 0.96rem;
+    line-height: 1.72;
+    color: #222;
+    margin-bottom: 20px;
+    max-width: 520px;
+}
+
+.single-property-meta {
+    display: flex;
+    gap: 34px;
+    font-size: 0.95rem;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+}
+
+.meta-item,
+.single-property-location {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.single-property-location {
+    color: #9b9b9b;
+    font-size: 0.96rem;
+    margin-bottom: 18px;
+}
+
+.inline-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 18px;
+    font-size: 1rem;
+    line-height: 1;
+}
+
+.email-realtor-btn {
+    display: inline-block;
+    background: #1b9dc1;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 18px;
+    border-radius: 4px;
+    font-size: 0.98rem;
+}
+
+.email-realtor-btn:hover {
+    background: #1788a7;
+    color: #fff;
+}
+
+/* FOOTER */
+footer,
+.site-footer {
+    padding: 10px 0 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.95rem;
+    color: #111;
+}
+
+/* FLASH */
+.alert {
+    margin-top: 10px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1100px) {
+    .properties-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .single-property-card {
+        grid-template-columns: 1fr;
+    }
+
+    .single-property-image {
+        min-height: 320px;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-title,
+    .property-form-page-title {
+        font-size: 2.6rem;
+    }
+
+    .property-form-grid,
+    .properties-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .site-brand {
+        font-size: 1.5rem;
+    }
+
+    .site-nav-link {
+        margin-right: 0;
+    }
+
+    .property-form-card,
+    .single-property-content {
+        padding: 20px;
+    }
 }
